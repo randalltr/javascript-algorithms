@@ -9,14 +9,14 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-    if (n < 0) {
-        return Number("-" + String(Math.abs(n)).split("").reverse().join(""));
-    } else {
-        return Number(String(n).split("").reverse().join(""));
-    }
-    
+    return parseInt(n.toString().split('').reverse().join('')) * Math.sign(n);    
 }
 
-console.log(reverseInt(-90));
-
 module.exports = reverseInt;
+
+// function reverseInt(n) {
+//     if (n < 0) {
+//         return Number("-" + String(Math.abs(n)).split("").reverse().join(""));
+//     } else {
+//         return Number(String(n).split("").reverse().join(""));
+//     }
