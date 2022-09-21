@@ -10,19 +10,20 @@
 
 function chunk(unchunked, size) {
     // create empty array to hold chunks called 'chunked'
-    chunked = [];
+    const chunked = [];
     // for each element in 'unchunked' array
-    for (let element in unchunked) {
+    for (let element of unchunked) {
+        const last = chunked[chunked.length - 1];
     // retrieve last element in 'chunked'
-        if (!chunked[-1] || chunked[-1].length === size) {
+        if (!last || last.length === size) {
     // if last element does not exist or if length equal to chunk size
-            [element].push(chunked);
+            chunked.push([element]);
     // push a new chunk into 'chunked' with the current element
         } else {
     // else add the current element into the chunk
-            chunked[-1] += element;
+            last.push(element);
     } }
-
+    return chunked;
 }
 
 console.log(chunk([1, 2, 3, 4], 2))
