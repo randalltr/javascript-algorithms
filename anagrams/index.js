@@ -8,6 +8,15 @@
 //   anagrams('RAIL! SAFETY!', 'fairy tales') --> True
 //   anagrams('Hi there', 'Bye there') --> False
 
-function anagrams(stringA, stringB) {}
+// RegEx word.replace(/[^/w]/g, "").toLowerCase();
+
+function anagrams(stringA, stringB) {
+    return (
+        stringA.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('') === 
+        stringB.replace(/[^\w]/g, "").toLowerCase().split('').sort().join('')
+    )
+}
+
+console.log(anagrams('rail safety', 'fairy tales'));
 
 module.exports = anagrams;
