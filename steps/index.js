@@ -18,16 +18,31 @@
 //       '####'
 
 function steps(n) {
-    
     for (i = 0; i < n; i++) {
-        hash = "";
-        for (j = 0; j <= i; j++) {
-            hash += "#"
+        stair = "";
+        for (j = 0; j < n; j++) {
+            if (j <= i) {
+                stair += "#";
+            } else {
+                stair += " ";
+            }
         }
-        console.log(hash);
-    } 
+        console.log(stair);
+    }
 }
 
 steps(3);
 
 module.exports = steps;
+
+
+// function steps(n) {
+    
+//     for (i = 0; i < n; i++) {
+//         hash = "";
+//         for (j = 0; j <= i; j++) {
+//             hash += "#";
+//         }
+//         console.log(hash);
+//     } 
+// }
