@@ -18,9 +18,9 @@
 //       '####'
 
 function steps(n) {
-    result = []
-    hash = ""
+    
     for (i = 0; i < n; i++) {
+        hash = "";
         for (j = 0; j <= i; j++) {
             hash += "#"
         }
