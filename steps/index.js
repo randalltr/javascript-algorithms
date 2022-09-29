@@ -17,6 +17,18 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n) {
+    result = []
+    hash = ""
+    for (i = 0; i < n; i++) {
+        for (j = 0; j <= i; j++) {
+            hash += "#"
+        }
+        result.push(hash);
+    }
+    return result;
+}
+
+console.log(steps(3));
 
 module.exports = steps;
