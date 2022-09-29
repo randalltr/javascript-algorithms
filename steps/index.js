@@ -24,11 +24,10 @@ function steps(n) {
         for (j = 0; j <= i; j++) {
             hash += "#"
         }
-        result.push(hash);
-    }
-    return result;
+        console.log(hash);
+    } 
 }
 
-console.log(steps(3));
+steps(3);
 
 module.exports = steps;
