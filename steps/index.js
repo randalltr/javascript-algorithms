@@ -17,21 +17,25 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-    for (i = 0; i < n; i++) {
-        stair = "";
-        for (j = 0; j < n; j++) {
-            if (j <= i) {
-                stair += "#";
-            } else {
-                stair += " ";
-            }
-        }
-        console.log(stair);
+function steps(n, row = 0, stair = '') {
+    if (n === row) {
+        return;
     }
+
+    if (n === stair.length) {
+        console.log(stair);
+        return steps(n, row + 1);
+    }
+
+    if (stair.length <= row) {
+        stair += '#';
+    } else {
+        stair += ' ';
+    }
+    steps(n, row, stair);
 }
 
-steps(3);
+steps(11);
 
 module.exports = steps;
 
@@ -45,4 +49,19 @@ module.exports = steps;
 //         }
 //         console.log(hash);
 //     } 
+// }
+
+
+// function steps(n) {
+//     for (i = 0; i < n; i++) {
+//         stair = "";
+//         for (j = 0; j < n; j++) {
+//             if (j <= i) {
+//                 stair += "#";
+//             } else {
+//                 stair += " ";
+//             }
+//         }
+//         console.log(stair);
+//     }
 // }
