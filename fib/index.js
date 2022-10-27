@@ -11,14 +11,14 @@
 function fib(n) {
     const result = [0, 1];
 
-    for (i = 2; i <= n; i++) {
-        result[i] = (result[i - 1]) + (result[i - 2]);
+    for (let i = 2; i <= n; i++) {
+        result.push((result[i - 1]) + (result[i - 2]));
     }
 
-    return result[n - 1];
+    return result[n];
 
 }
 
-console.log(fib(10));
+console.log(fib(4));
 
 module.exports = fib;
