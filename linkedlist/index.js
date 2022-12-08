@@ -27,6 +27,10 @@ class LinkedList {
             node = node.next;
         }
     }
+
+    getFirst() {
+        return this.head;
+    }
 }
 
 module.exports = { Node, LinkedList };
